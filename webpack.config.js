@@ -4,7 +4,9 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: './lib',
-    filename: 'library.js'
+    filename: 'library.js',
+    library: 'libSeed',
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
