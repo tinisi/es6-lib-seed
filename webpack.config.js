@@ -1,10 +1,15 @@
 const webpack = require('webpack');
 
-module.exports = {
-  entry: './src/index.js',
+var isProduction = (process.env.NODE_ENV === 'production');
+
+var webpackConfig = {
+  entry: {
+    library: './src/index.js',
+    "library.min": './src/index.js'
+  },
   output: {
     path: './lib',
-    filename: 'library.js',
+    filename: '[name].js',
     library: 'libSeed',
     libraryTarget: 'umd'
   },
@@ -19,5 +24,25 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: []
 };
+
+if ( isProduction ) {
+
+  webpackConfig.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      minimize: true,
+      include: /\.min\.js$/,
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      }
+    })
+  );
+
+};
+
+module.exports = webpackConfig;
