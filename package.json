@@ -1,6 +1,6 @@
 {
   "name": "es6-lib-seed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple seed project for an ES6 library",
   "main": "./lib/library.min.js",
   "scripts": {
