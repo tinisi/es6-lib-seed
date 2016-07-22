@@ -6,7 +6,7 @@ _Disclaimer: This is my first Webpack project, so I am still learning. Suggestio
 
 The goal of this repo is to get a simplest possible useful boilerplate project to be used to author libraries using ES2015, AKA ES6 (seriously, why did they have to name it after the year!)
 
-This is also part of a two repo exploration of an ES6 ecosystem, check out (es6-web-app-seed)[https://github.com/tinisi/es6-web-app-seed] which is a simple web app that depends on this library.
+This is also part of a two repo exploration of an ES6 ecosystem, check out [es6-web-app-seed](https://github.com/tinisi/es6-web-app-seed) which is a simple web app that depends on this library.
 
 If you have suggestions that are in the spirit of "keep it simple" please submit a pull request.
 
